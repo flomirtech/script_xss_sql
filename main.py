@@ -24,7 +24,7 @@ def test_xss(url, payload):
 site_url = "http://exemple.com/search"
 
 # Payloads personnalisables
-sql_payloads = ["' OR '1'='1'", "1'; DROP TABLE users; --"]
+sql_payloads = ["' OR '1'='1'"]
 xss_payloads = ["<script>alert('XSS')</script>", "<img src=x onerror=alert('XSS')>"]
 
 # Test de l'injection SQL
